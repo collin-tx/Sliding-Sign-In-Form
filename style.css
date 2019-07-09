@@ -98,6 +98,11 @@ button {
 
 }
 
+button:hover{
+    cursor: pointer;
+    opacity: 0.8;
+}
+
 button:active {
     transform: scale(0.95);
 }
@@ -175,5 +180,40 @@ button.ghost {
 }
 
 .overlay-left {
-    transform: translateX(-20%);
+    transform: translateX(0);
+}
+
+/* Animation */
+
+/* Move sign in form to the right */
+.container.right-panel-active .sign-in-container{
+    transform: translateX(100%);
+}
+
+/* Moves overlay left */
+.container.container.right-panel-active .overlay-container {
+    transform: translateX(-100%)
+}
+
+/* Make Sign up visible */
+
+.container.container.right-panel-active .sign-up-container {
+    transform: translateX(100%);
+    opacity: 1;
+    z-index: 5;
+
+}
+
+/* Move overlay back to right */
+
+.container.right-panel-active .overlay {
+    transform: translateX(50%);
+}
+
+.container.right-panel-active .overlay-left {
+    transform: translateX(0);
+
+   }
+.container.right-panel-active .overlay-right {
+        transform: translateX(0);
 }
